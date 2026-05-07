@@ -53,7 +53,7 @@ ssh $SERVER "cd $DEPLOY_BASE && ls -t | tail -n +4 | xargs rm -rf"
 stage_end
 
 stage_start "Update Caddyfile"
-ssh $SERVER "sudo cp ./Caddyfile /etc/caddy/Caddyfile"
+rsync -az Caddyfile $SERVER:/tmp/Caddyfile && ssh $SERVER "sudo mv /tmp/Caddyfile /etc/caddy/Caddyfile"
 stage_end
 
 stage_start "Restarting Caddy"
