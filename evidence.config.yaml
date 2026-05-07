@@ -64,3 +64,4 @@ plugins:
 
   datasources:
     "@evidence-dev/postgres": {}
+    "@evidence-dev/mysql": {}

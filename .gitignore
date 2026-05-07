@@ -44,3 +44,5 @@ priority_support_users.csv
 evidence-*.tgz
 
 build
+
+.evidence

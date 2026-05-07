@@ -55,7 +55,7 @@ More on the setup: [lab](https://github.com/Serikuly-Miras/lab)
 ```sql backblaze_month_over_month_agg
   select
     capacity_change_percentage,
-    current_month_capacity_bytes / 1024**5 as current_month_capacity_PiB,
+    current_month_capacity_bytes::DOUBLE / 1024**5 as current_month_capacity_PiB,
     current_month_drives_count,
     drives_change_count
   from dwh.backblaze_month_over_month_agg
