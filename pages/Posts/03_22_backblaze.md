@@ -21,7 +21,7 @@ More on the setup: [lab](https://github.com/Serikuly-Miras/lab)
   select
     first_date,
     last_date,
-    first_date::date::text || ' - ' || last_date::date::text as timerange_covered_months
+    (first_date AT TIME ZONE 'UTC')::date::text || ' - ' || (last_date AT TIME ZONE 'UTC')::date::text as timerange_covered_months
   from backblaze_datacenters_timerange_covered
 ```
 
