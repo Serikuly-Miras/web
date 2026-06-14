@@ -1,35 +1,28 @@
 {
-  "name": "web",
-  "version": "0.0.1",
-  "scripts": {
-    "build": "evidence build",
-    "build:strict": "evidence build:strict",
-    "dev": "evidence dev --open /",
-    "test": "evidence build",
-    "sources": "evidence sources",
-    "sources:strict": "evidence sources --strict",
-    "preview": "evidence preview"
-  },
-  "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=18.0.0"
-  },
-  "type": "module",
-  "dependencies": {
-    "@evidence-dev/component-utilities": "^4.0.13",
-    "@evidence-dev/core-components": "^5.4.2",
-    "@evidence-dev/csv": "^1.0.15",
-    "@evidence-dev/evidence": "^40.1.8",
-    "@evidence-dev/postgres": "^1.0.9",
-    "@evidence-dev/mysql": "^1.1.6",
-    "@evidence-dev/sdk": "^4.0.2",
-    "@evidence-dev/source-javascript": "^0.0.3",
-    "@evidence-dev/tailwind": "^3.1.4"
-  },
-  "overrides": {
-    "jsonwebtoken": "9.0.0",
-    "trim@<0.0.3": ">0.0.3",
-    "sqlite3": "5.1.5",
-    "axios": "^1.7.4"
-  }
+	"name": "web",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check .",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^7.0.1",
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/kit": "^2.63.0",
+		"@sveltejs/vite-plugin-svelte": "^7.1.2",
+		"prettier": "^3.8.3",
+		"prettier-plugin-svelte": "^4.1.0",
+		"svelte": "^5.56.1",
+		"svelte-check": "^4.6.0",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.16"
+	}
 }

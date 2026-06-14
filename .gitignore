@@ -1,48 +1,23 @@
-.DS_Store
 node_modules
-dist
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
 .env
-.pnpm-debug.log
-.vscode
-.fleet
-customization/
-/packages/components
-/packages/evidence/template
-*.sqlite
-*.sqlite-journal
+.env.*
+!.env.example
+!.env.test
 
-# Ignore playright artifacts
-**/test-results/**
-**/playwright-report/**
-**/playwright/.cache/**
-.parcel-cache
-
-**/storybook-static/**
-*.log
-
-connection.options.yaml
-**/static/data
-
-.idea
-packages/core-components/.evidence-queries
-packages/core-components/.profile.json
-packages/ui/core-components/.evidence-queries/sources/hashes.json
-
-
-packages/extension/node_modules
-packages/extension/out
-packages/extension/dist
-packages/extension/.vscode-test
-packages/extension/*.vsix
-packages/extension/.DS_Store
-packages/ui/core-components/coverage
-sites/docs/.evidence/meta/query-cache/hashes.json
-
-priority_support_users.csv
-.aider*
-
-evidence-*.tgz
-
-build
-
-.evidence
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*

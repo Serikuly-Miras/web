@@ -1,0 +1,60 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--bg: #000;
+	--fg: #fff;
+	--fg-muted: #aaa;
+}
+
+:root.light {
+	--bg: #fff;
+	--fg: #000;
+	--fg-muted: #555;
+}
+
+body {
+	font-family: monospace;
+	font-size: 1rem;
+	line-height: 1.6;
+	max-width: 640px;
+	margin: 2rem auto;
+	padding: 0 1rem;
+	color: var(--fg);
+	background: var(--bg);
+}
+
+nav {
+	margin-bottom: 2rem;
+}
+
+a {
+	color: var(--fg);
+}
+
+a:visited {
+	color: var(--fg-muted);
+}
+
+h1, h2, h3 {
+	line-height: 1.2;
+}
+
+article {
+	margin-top: 1rem;
+}
+
+small {
+	color: var(--fg-muted);
+}
+
+button.theme-toggle {
+	background: none;
+	border: none;
+	color: var(--fg);
+	font-family: monospace;
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 0;
+}

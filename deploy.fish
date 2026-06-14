@@ -6,7 +6,7 @@ set SERVER "hz"
 set DEPLOY_BASE "/var/www/s-miras.com-releases"
 set CURRENT_LINK "/var/www/s-miras.com"
 set BUILD_DIR "build"
-set TIMESTAMP (date +%Y%m%d_%H%M%S)
+set TIMESTAMP (date +%Y_%m_%d__%H_%M_%S)
 set NEW_RELEASE "$DEPLOY_BASE/$TIMESTAMP"
 
 function stage_start
@@ -28,8 +28,8 @@ stage_start "Clean previous build"
 rm -rf $BUILD_DIR
 stage_end
 
-stage_start "Building Evidence"
-npm run build:strict > /dev/null
+stage_start "Building SvelteKit"
+npm run build > /dev/null
 stage_end
 
 stage_start "Creating release directory"

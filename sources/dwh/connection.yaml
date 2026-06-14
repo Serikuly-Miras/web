@@ -1,8 +1,0 @@
-type: mysql
-name: dwh
-options:
-  database: gold
-  host: starrocks.lab.s-miras.com
-  port: 9030
-buildOptions:
-  batchSize: 1000000
