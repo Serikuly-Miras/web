@@ -1,0 +1,27 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: traefik
+  namespace: kube-system
+spec:
+  valuesContent: |-
+    providers:
+      kubernetesGateway:
+        enabled: true
+    certResolvers:
+      letsencrypt:
+        email: your@email.com
+        tlsChallenge: true
+        storage: /data/acme.json
+    persistence:
+      enabled: true
+      size: 128Mi
+    gateway:
+      enabled: true
+      listeners:
+        websecure:
+          protocol: HTTPS
+          port: 8443
+          namespacePolicy:
+            from: All
+          certificateRefs: []
