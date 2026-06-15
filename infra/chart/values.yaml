@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: serikulymiras/web
   pullPolicy: IfNotPresent
-  tag: 'v1'
+  tag: 'v2'
 
 imagePullSecrets: []
 nameOverride: ''
