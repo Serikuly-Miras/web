@@ -8,6 +8,14 @@ spec:
     providers:
       kubernetesGateway:
         enabled: true
+    ports:
+      web:
+        http:
+          redirections:
+            entryPoint:
+              to: websecure
+              scheme: https
+              permanent: true
     gateway:
       enabled: true
       listeners:
