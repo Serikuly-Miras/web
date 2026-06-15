@@ -8,20 +8,18 @@ spec:
     providers:
       kubernetesGateway:
         enabled: true
-    certResolvers:
-      letsencrypt:
-        email: your@email.com
-        tlsChallenge: true
-        storage: /data/acme.json
-    persistence:
-      enabled: true
-      size: 128Mi
     gateway:
       enabled: true
       listeners:
         websecure:
           protocol: HTTPS
           port: 8443
+          hostname: "s-miras.com"
+          mode: Terminate
           namespacePolicy:
             from: All
-          certificateRefs: []
+          certificateRefs:
+            - name: tls-web
+              namespace: kube-system
+              group: ""
+              kind: Secret
