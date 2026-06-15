@@ -21,6 +21,8 @@
 	&nbsp;|&nbsp;
 	<a href="/cv">cv</a>
 	&nbsp;|&nbsp;
+	<a href="/monitor">monitor</a>
+	&nbsp;|&nbsp;
 	<button class="theme-toggle" onclick={toggle}
 		>{ready ? (dark ? 'light' : 'dark') : '-----'}</button
 	>
