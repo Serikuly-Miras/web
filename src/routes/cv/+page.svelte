@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>CV | s-miras</title>
+	<title>cv | s-miras</title>
 </svelte:head>
 
 <h1>Miras Serikuly</h1>

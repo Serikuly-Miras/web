@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Monitor | s-miras</title>
+	<title>monitor | s-miras</title>
 </svelte:head>
 
 <article>
