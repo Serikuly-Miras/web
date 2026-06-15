@@ -29,7 +29,7 @@ httpRoute:
   enabled: true
   gateway:
     name: traefik-gateway
-    namespace: traefik
+    namespace: kube-system
   hostnames:
     - 's-miras.com'
 
