@@ -1,1 +1,1 @@
-// prerender disabled — server required for query.live
+export const prerender = true;
