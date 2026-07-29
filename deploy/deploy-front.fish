@@ -11,6 +11,19 @@ set -l release_name (date +%Y%m%d%H%M%S)
 set -l release_path $releases_dir/$release_name
 set -l skip (math $keep + 1)
 
+echo "==> lint + check"
+npm --prefix $front_dir run lint
+or begin
+    echo "error: npm run lint failed" >&2
+    exit 1
+end
+
+npm --prefix $front_dir run check
+or begin
+    echo "error: npm run check failed" >&2
+    exit 1
+end
+
 echo "==> building"
 npm --prefix $front_dir run build
 or begin
