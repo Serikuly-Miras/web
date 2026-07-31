@@ -1,6 +1,13 @@
 s-miras.com {
-    root * /var/www/s-miras/current
     encode zstd gzip
-    try_files {path} {path}.html /index.html
-    file_server
+
+    handle /api/* {
+        reverse_proxy localhost:3000
+    }
+
+    handle {
+        root * /var/www/s-miras/current
+        try_files {path} {path}.html /index.html
+        file_server
+    }
 }
