@@ -17,7 +17,7 @@
 }
 
 body {
-	font-family: monospace;
+	font-family: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 	font-size: 1rem;
 	line-height: 1.6;
 	max-width: 640px;
@@ -59,8 +59,7 @@ button.theme-toggle {
 	background: none;
 	border: none;
 	color: var(--fg);
-	font-family: monospace;
-	font-size: 1rem;
+	font: inherit;
 	cursor: pointer;
 	padding: 0;
 }

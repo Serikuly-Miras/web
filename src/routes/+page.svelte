@@ -7,5 +7,5 @@
 
 	<p>I'm Serikuly Miras, software engineer from Kazakhstan, Almaty.</p>
 
-	<p>This is a home page of my personal blog</p>
+	<p>This is a home page of my personal blog.</p>
 </article>
