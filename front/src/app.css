@@ -5,15 +5,15 @@
 }
 
 :root {
-	--bg: #000;
-	--fg: #fff;
-	--fg-muted: #aaa;
+	--bg: #111;
+	--fg: #eee;
+	--fg-muted: #999;
 }
 
 :root.light {
-	--bg: #fff;
-	--fg: #000;
-	--fg-muted: #555;
+	--bg: #fafafa;
+	--fg: #111;
+	--fg-muted: #666;
 }
 
 body {
@@ -42,6 +42,7 @@ a:visited {
 h1,
 h2,
 h3 {
+	font-size: 1.5rem;
 	line-height: 1.2;
 }
 
@@ -50,6 +51,7 @@ article {
 }
 
 small {
+	font-size: inherit;
 	color: var(--fg-muted);
 }
 
