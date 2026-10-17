@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 set -l host hz
-set -l front_dir (dirname (status --current-filename))/../front
+set -l front_dir (dirname (status --current-filename))
 set -l local_build $front_dir/build
 set -l base /var/www/s-miras
 set -l releases_dir $base/releases
