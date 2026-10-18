@@ -1,0 +1,828 @@
+{
+  "design": "add16",
+  "pdk": "sky130A",
+  "units": "um",
+  "axes": "x = GDS x, y = up, z = -GDS y; origin at die centre",
+  "z_scale": 1.0,
+  "size": [
+    64.89,
+    75.61
+  ],
+  "die": {
+    "node": "die",
+    "color": "#2b3038",
+    "thickness": 0.1
+  },
+  "layers": [
+    {
+      "name": "diff",
+      "z": 0.0,
+      "thickness": 0.12,
+      "color": "#7a9a5a",
+      "nodes": {
+        "logic": {
+          "node": "diff_logic",
+          "shapes": 559
+        },
+        "filler": {
+          "node": "diff_filler",
+          "shapes": 474
+        }
+      }
+    },
+    {
+      "name": "poly",
+      "z": 0.33,
+      "thickness": 0.18,
+      "color": "#c0392b",
+      "nodes": {
+        "logic": {
+          "node": "poly_logic",
+          "shapes": 712
+        },
+        "filler": {
+          "node": "poly_filler",
+          "shapes": 474
+        }
+      }
+    },
+    {
+      "name": "licon",
+      "z": 0.51,
+      "thickness": 0.43,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "licon_logic",
+          "shapes": 4491
+        },
+        "filler": {
+          "node": "licon_filler",
+          "shapes": 2022
+        }
+      }
+    },
+    {
+      "name": "li1",
+      "z": 0.94,
+      "thickness": 0.1,
+      "color": "#9b59b6",
+      "nodes": {
+        "logic": {
+          "node": "li1_logic",
+          "shapes": 1033
+        },
+        "filler": {
+          "node": "li1_filler",
+          "shapes": 127
+        }
+      }
+    },
+    {
+      "name": "mcon",
+      "z": 1.04,
+      "thickness": 0.34,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "mcon_logic",
+          "shapes": 2414
+        },
+        "filler": {
+          "node": "mcon_filler",
+          "shapes": 1282
+        }
+      }
+    },
+    {
+      "name": "met1",
+      "z": 1.38,
+      "thickness": 0.36,
+      "color": "#3498db",
+      "nodes": {
+        "logic": {
+          "node": "met1_logic",
+          "shapes": 466
+        },
+        "filler": {
+          "node": "met1_filler",
+          "shapes": 127
+        }
+      }
+    },
+    {
+      "name": "via",
+      "z": 1.74,
+      "thickness": 0.27,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via_logic",
+          "shapes": 495
+        }
+      }
+    },
+    {
+      "name": "met2",
+      "z": 2.01,
+      "thickness": 0.36,
+      "color": "#e67e22",
+      "nodes": {
+        "logic": {
+          "node": "met2_logic",
+          "shapes": 216
+        }
+      }
+    },
+    {
+      "name": "via2",
+      "z": 2.37,
+      "thickness": 0.42,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via2_logic",
+          "shapes": 110
+        }
+      }
+    },
+    {
+      "name": "met3",
+      "z": 2.79,
+      "thickness": 0.85,
+      "color": "#1abc9c",
+      "nodes": {
+        "logic": {
+          "node": "met3_logic",
+          "shapes": 50
+        }
+      }
+    },
+    {
+      "name": "via3",
+      "z": 3.63,
+      "thickness": 0.39,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via3_logic",
+          "shapes": 80
+        }
+      }
+    },
+    {
+      "name": "met4",
+      "z": 4.02,
+      "thickness": 0.85,
+      "color": "#f1c40f",
+      "nodes": {
+        "logic": {
+          "node": "met4_logic",
+          "shapes": 2
+        }
+      }
+    },
+    {
+      "name": "via4",
+      "z": 4.87,
+      "thickness": 0.51,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via4_logic",
+          "shapes": 2
+        }
+      }
+    },
+    {
+      "name": "met5",
+      "z": 5.37,
+      "thickness": 1.26,
+      "color": "#e84393",
+      "nodes": {
+        "logic": {
+          "node": "met5_logic",
+          "shapes": 2
+        }
+      }
+    }
+  ],
+  "labels": [
+    {
+      "text": "VGND",
+      "position": [
+        -0.015,
+        6.63,
+        6.975
+      ],
+      "layer": "met5",
+      "direction": "inout",
+      "use": "ground"
+    },
+    {
+      "text": "VGND",
+      "position": [
+        -7.305,
+        4.87,
+        1.085
+      ],
+      "layer": "met4",
+      "direction": "inout",
+      "use": "ground"
+    },
+    {
+      "text": "VPWR",
+      "position": [
+        -0.015,
+        6.63,
+        10.275
+      ],
+      "layer": "met5",
+      "direction": "inout",
+      "use": "power"
+    },
+    {
+      "text": "VPWR",
+      "position": [
+        -10.605,
+        4.87,
+        1.085
+      ],
+      "layer": "met4",
+      "direction": "inout",
+      "use": "power"
+    },
+    {
+      "text": "a_i[0]",
+      "position": [
+        1.825,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[10]",
+      "position": [
+        -32.145,
+        3.64,
+        6.185
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[11]",
+      "position": [
+        -32.145,
+        3.64,
+        10.265
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[12]",
+      "position": [
+        -32.145,
+        3.64,
+        -3.335
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[13]",
+      "position": [
+        -32.145,
+        3.64,
+        -6.055
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[14]",
+      "position": [
+        -32.145,
+        3.64,
+        -16.935
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[15]",
+      "position": [
+        -32.145,
+        3.64,
+        -19.655
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[1]",
+      "position": [
+        0.905,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[2]",
+      "position": [
+        14.705,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[3]",
+      "position": [
+        32.145,
+        3.64,
+        -6.055
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[4]",
+      "position": [
+        32.145,
+        3.64,
+        -1.975
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[5]",
+      "position": [
+        32.145,
+        3.64,
+        3.465
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[6]",
+      "position": [
+        11.025,
+        2.37,
+        37.665
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[7]",
+      "position": [
+        2.745,
+        2.37,
+        37.665
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[8]",
+      "position": [
+        -32.145,
+        3.64,
+        23.865
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "a_i[9]",
+      "position": [
+        -32.145,
+        3.64,
+        21.145
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[0]",
+      "position": [
+        2.745,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[10]",
+      "position": [
+        -32.145,
+        3.64,
+        7.545
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[11]",
+      "position": [
+        -32.145,
+        3.64,
+        8.905
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[12]",
+      "position": [
+        -32.145,
+        3.64,
+        -4.695
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[13]",
+      "position": [
+        -32.145,
+        3.64,
+        -7.415
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[14]",
+      "position": [
+        -32.145,
+        3.64,
+        -18.295
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[15]",
+      "position": [
+        -32.145,
+        3.64,
+        -21.015
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[1]",
+      "position": [
+        -1.855,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[2]",
+      "position": [
+        15.625,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[3]",
+      "position": [
+        32.145,
+        3.64,
+        -7.415
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[4]",
+      "position": [
+        32.145,
+        3.64,
+        -0.615
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[5]",
+      "position": [
+        32.145,
+        3.64,
+        4.825
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[6]",
+      "position": [
+        10.105,
+        2.37,
+        37.665
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[7]",
+      "position": [
+        1.825,
+        2.37,
+        37.665
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[8]",
+      "position": [
+        -32.145,
+        3.64,
+        22.505
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "b_i[9]",
+      "position": [
+        -32.145,
+        3.64,
+        19.785
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "clk_i",
+      "position": [
+        32.145,
+        3.64,
+        19.785
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[0]",
+      "position": [
+        8.265,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[10]",
+      "position": [
+        0.905,
+        2.37,
+        37.665
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[11]",
+      "position": [
+        -32.145,
+        3.64,
+        2.105
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[12]",
+      "position": [
+        -0.935,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[13]",
+      "position": [
+        -0.015,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[14]",
+      "position": [
+        -3.695,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[15]",
+      "position": [
+        -4.615,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[1]",
+      "position": [
+        11.945,
+        2.37,
+        -37.665
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[2]",
+      "position": [
+        32.145,
+        3.64,
+        -18.295
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[3]",
+      "position": [
+        32.145,
+        3.64,
+        -8.775
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[4]",
+      "position": [
+        32.145,
+        3.64,
+        0.745
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[5]",
+      "position": [
+        32.145,
+        3.64,
+        2.105
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[6]",
+      "position": [
+        32.145,
+        3.64,
+        12.985
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[7]",
+      "position": [
+        32.145,
+        3.64,
+        14.345
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[8]",
+      "position": [
+        -0.015,
+        2.37,
+        37.665
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "sum_o[9]",
+      "position": [
+        -0.935,
+        2.37,
+        37.665
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    }
+  ],
+  "stats": {
+    "area": {
+      "die_um2": 4906.33,
+      "stdcell_um2": 1767.95,
+      "utilization": 0.635628,
+      "wirelength_um": 2119
+    },
+    "cells": {
+      "flip_flops": 16,
+      "logic_gates": 87,
+      "buffers": 51,
+      "filler_tap": 354
+    },
+    "timing": {
+      "clock_period_ns": 20,
+      "setup_slack_worst_ns": 10.574019292790133,
+      "hold_slack_worst_ns": 3.8442530247194493,
+      "fmax_typical_mhz": 146.2,
+      "fmax_worst_corner_mhz": 106.1
+    },
+    "power_typical_w": {
+      "total": 0.00015332562907133251,
+      "switching": 4.9861089792102575e-05,
+      "internal": 0.00010346191265853122,
+      "leakage": 2.633864459866686e-09
+    },
+    "checks": {
+      "drc_errors": 0,
+      "lvs_errors": 0,
+      "antenna_violations": 0,
+      "max_slew_violations": 0
+    }
+  }
+}

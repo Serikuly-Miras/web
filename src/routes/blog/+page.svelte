@@ -4,5 +4,5 @@
 
 <article>
 	<h2>Blog</h2>
-	<p>Nothing here yet.</p>
+	<p><small>2026-10-18</small> <a href="/blog/spade-asic">Spade to silicon</a></p>
 </article>

@@ -9,3 +9,4 @@ bun.lockb
 /static/
 /infra/
 /src/lib/generated/
+/src/lib/asic/

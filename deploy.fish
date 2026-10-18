@@ -55,10 +55,10 @@ ssh $host "
 
 echo "==> stats"
 echo "local build:"
-du -sh $local_build $local_build/gallery
+du -sh $local_build $local_build/gallery $local_build/asic
 ssh $host "
     echo 'serving (current release):'
-    du -sh $release_path $release_path/gallery
+    du -sh $release_path $release_path/gallery $release_path/asic
     echo 'all $keep releases on disk (shared files counted once):'
     du -sh $releases_dir
     echo 'disk:'
