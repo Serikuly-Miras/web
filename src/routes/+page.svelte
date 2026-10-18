@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>blog | s-miras</title>
+	<title>home | s-miras</title>
 </svelte:head>
 
 <article>

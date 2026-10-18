@@ -4,14 +4,14 @@
 </script>
 
 <svelte:head>
-	<title>gallery | s-miras</title>
+	<title>photos | s-miras</title>
 </svelte:head>
 
 <article>
-	<h2>Gallery</h2>
+	<h2>Photos</h2>
 	{#each photos as photo (photo.id)}
 		<figure>
-			<a href="/gallery/{photo.id}" target="_blank" rel="noopener">
+			<a href="/photos/{photo.id}" target="_blank" rel="noopener">
 				<picture>
 					<source type="image/avif" srcset={photo.avif} {sizes} />
 					<img
@@ -31,7 +31,7 @@
 				{#if photo.meta.title}{photo.meta.title}<br />{/if}
 				<small>
 					{details(photo, { withLens: false })} ·
-					<a href="/gallery/{photo.id}" target="_blank" rel="noopener"
+					<a href="/photos/{photo.id}" target="_blank" rel="noopener"
 						>png, {megabytes(photo.pngBytes)}</a
 					>
 				</small>
@@ -51,6 +51,11 @@
 		display: block;
 		width: 100%;
 		height: auto;
+	}
+
+	:global(:root.light) img {
+		outline: 1px solid var(--fg-muted);
+		outline-offset: -1px;
 	}
 
 	img:global(.loading) {

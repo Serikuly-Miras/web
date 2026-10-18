@@ -91,7 +91,7 @@
 	<p class="info">
 		<small
 			>{details(photo)} · <a href={src ?? photo.png} download={filename}>save</a> ·
-			<a href="/gallery">gallery</a></small
+			<a href="/photos">photos</a></small
 		>
 	</p>
 </div>
@@ -123,6 +123,11 @@
 		max-height: 100%;
 		width: auto;
 		height: auto;
+	}
+
+	:global(:root.light) img {
+		outline: 1px solid var(--fg-muted);
+		outline-offset: -1px;
 	}
 
 	img.hidden {

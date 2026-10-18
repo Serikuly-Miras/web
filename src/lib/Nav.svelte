@@ -7,8 +7,8 @@
 
 	const links = [
 		{ href: '/', label: 'home' },
-		{ href: '/articles', label: 'articles' },
-		{ href: '/gallery', label: 'gallery' },
+		{ href: '/blog', label: 'blog' },
+		{ href: '/photos', label: 'photos' },
 		{ href: '/contacts', label: 'contacts' }
 	];
 
