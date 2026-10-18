@@ -33,7 +33,17 @@ end
 
 echo "==> syncing $local_build -> $host:$release_path"
 ssh $host "mkdir -p $release_path"
-rsync -a --delete $local_build/ $host:$release_path/
+
+set -l prev (ssh $host "readlink -f $base/current 2>/dev/null")
+set -l link_dest
+if test -n "$prev"
+    set link_dest --link-dest=$prev
+end
+rsync -rlp --checksum --delete --stats $link_dest $local_build/ $host:$release_path/
+or begin
+    echo "error: rsync failed" >&2
+    exit 1
+end
 
 echo "==> swapping current -> $release_name and pruning old releases (keeping last $keep)"
 ssh $host "
@@ -41,6 +51,18 @@ ssh $host "
     mv -Tf $base/current.tmp $base/current
     cd $releases_dir
     ls -1t | tail -n +$skip | xargs -r rm -rf --
+"
+
+echo "==> stats"
+echo "local build:"
+du -sh $local_build $local_build/gallery
+ssh $host "
+    echo 'serving (current release):'
+    du -sh $release_path $release_path/gallery
+    echo 'all $keep releases on disk (shared files counted once):'
+    du -sh $releases_dir
+    echo 'disk:'
+    df -h $base | tail -n 1
 "
 
 echo "==> done"
