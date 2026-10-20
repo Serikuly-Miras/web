@@ -22,11 +22,11 @@
       "nodes": {
         "logic": {
           "node": "diff_logic",
-          "shapes": 2603
+          "shapes": 2621
         },
         "filler": {
           "node": "diff_filler",
-          "shapes": 4076
+          "shapes": 4046
         }
       }
     },
@@ -38,11 +38,11 @@
       "nodes": {
         "logic": {
           "node": "poly_logic",
-          "shapes": 3005
+          "shapes": 3028
         },
         "filler": {
           "node": "poly_filler",
-          "shapes": 4076
+          "shapes": 4046
         }
       }
     },
@@ -54,11 +54,11 @@
       "nodes": {
         "logic": {
           "node": "licon_logic",
-          "shapes": 21435
+          "shapes": 21665
         },
         "filler": {
           "node": "licon_filler",
-          "shapes": 16964
+          "shapes": 16844
         }
       }
     },
@@ -70,11 +70,11 @@
       "nodes": {
         "logic": {
           "node": "li1_logic",
-          "shapes": 5043
+          "shapes": 5094
         },
         "filler": {
           "node": "li1_filler",
-          "shapes": 572
+          "shapes": 586
         }
       }
     },
@@ -86,11 +86,11 @@
       "nodes": {
         "logic": {
           "node": "mcon_logic",
-          "shapes": 11663
+          "shapes": 11744
         },
         "filler": {
           "node": "mcon_filler",
-          "shapes": 9475
+          "shapes": 9406
         }
       }
     },
@@ -102,11 +102,11 @@
       "nodes": {
         "logic": {
           "node": "met1_logic",
-          "shapes": 2600
+          "shapes": 2629
         },
         "filler": {
           "node": "met1_filler",
-          "shapes": 572
+          "shapes": 586
         }
       }
     },
@@ -118,7 +118,7 @@
       "nodes": {
         "logic": {
           "node": "via_logic",
-          "shapes": 2895
+          "shapes": 2920
         }
       }
     },
@@ -130,7 +130,7 @@
       "nodes": {
         "logic": {
           "node": "met2_logic",
-          "shapes": 1177
+          "shapes": 1186
         }
       }
     },
@@ -142,7 +142,7 @@
       "nodes": {
         "logic": {
           "node": "via2_logic",
-          "shapes": 294
+          "shapes": 271
         }
       }
     },
@@ -154,7 +154,7 @@
       "nodes": {
         "logic": {
           "node": "met3_logic",
-          "shapes": 117
+          "shapes": 103
         }
       }
     },
@@ -166,7 +166,7 @@
       "nodes": {
         "logic": {
           "node": "via3_logic",
-          "shapes": 205
+          "shapes": 196
         }
       }
     },
@@ -178,7 +178,7 @@
       "nodes": {
         "logic": {
           "node": "met4_logic",
-          "shapes": 8
+          "shapes": 4
         }
       }
     },
@@ -795,34 +795,34 @@
   "stats": {
     "area": {
       "die_um2": 21288.7,
-      "stdcell_um2": 8092.76,
-      "utilization": 0.48974,
-      "wirelength_um": 16415
+      "stdcell_um2": 8151.57,
+      "utilization": 0.493299,
+      "wirelength_um": 16367
     },
     "cells": {
       "flip_flops": 16,
       "logic_gates": 621,
-      "buffers": 109,
-      "filler_tap": 2695
+      "buffers": 133,
+      "filler_tap": 2677
     },
     "timing": {
       "clock_period_ns": 20,
-      "setup_slack_worst_ns": 3.0905945344385084,
-      "hold_slack_worst_ns": 4.244944071958441,
-      "fmax_typical_mhz": 96.4,
-      "fmax_worst_corner_mhz": 59.1
+      "setup_slack_worst_ns": 2.9396166333174163,
+      "hold_slack_worst_ns": 4.245656391071186,
+      "fmax_typical_mhz": 95.4,
+      "fmax_worst_corner_mhz": 58.6
     },
     "power_typical_w": {
-      "total": 0.0008690013200975955,
-      "switching": 0.0004021117929369211,
-      "internal": 0.00046687343274243176,
-      "leakage": 1.613908118258678e-08
+      "total": 0.0008775469614192843,
+      "switching": 0.00040548903052695096,
+      "internal": 0.00047204160364344716,
+      "leakage": 1.6273624225959793e-08
     },
     "checks": {
       "drc_errors": 0,
       "lvs_errors": 0,
       "antenna_violations": 0,
-      "max_slew_violations": 209
+      "max_slew_violations": 187
     }
   }
 }

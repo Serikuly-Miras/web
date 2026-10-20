@@ -13,8 +13,9 @@
 		Check out the <a href="https://github.com/Serikuly-Miras/logic">code</a> and the models:
 	</p>
 	<ul>
-		<li><a href="/asic/add16">16-bit adder</a></li>
-		<li><a href="/asic/mul16">16-bit multiplier</a></li>
+		<li><a href="/asic/add16">add16</a></li>
+		<li><a href="/asic/mul16">mul16</a></li>
 		<li><a href="/asic/blinky">blinky</a></li>
+		<li><a href="/asic/fifo16">fifo16</a></li>
 	</ul>
 </article>
