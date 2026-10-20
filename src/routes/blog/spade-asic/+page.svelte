@@ -17,5 +17,6 @@
 		<li><a href="/asic/mul16">mul16</a> — 16×16 combinational multiplier</li>
 		<li><a href="/asic/blinky">blinky</a> — counter that toggles an LED</li>
 		<li><a href="/asic/fifo16">fifo16</a> — 16-entry synchronous FIFO</li>
+		<li><a href="/asic/t21">t21</a> — tis100's basic execution node, a tiny processor</li>
 	</ul>
 </article>

@@ -1,0 +1,2159 @@
+{
+  "design": "t21",
+  "pdk": "sky130A",
+  "units": "um",
+  "axes": "x = GDS x, y = up, z = -GDS y; origin at die centre",
+  "z_scale": 1.0,
+  "size": [
+    241.07,
+    251.79
+  ],
+  "die": {
+    "node": "die",
+    "color": "#2b3038",
+    "thickness": 0.1
+  },
+  "layers": [
+    {
+      "name": "diff",
+      "z": 0.0,
+      "thickness": 0.12,
+      "color": "#7a9a5a",
+      "nodes": {
+        "logic": {
+          "node": "diff_logic",
+          "shapes": 7111
+        },
+        "filler": {
+          "node": "diff_filler",
+          "shapes": 12460
+        }
+      }
+    },
+    {
+      "name": "poly",
+      "z": 0.33,
+      "thickness": 0.18,
+      "color": "#c0392b",
+      "nodes": {
+        "logic": {
+          "node": "poly_logic",
+          "shapes": 13836
+        },
+        "filler": {
+          "node": "poly_filler",
+          "shapes": 12460
+        }
+      }
+    },
+    {
+      "name": "licon",
+      "z": 0.51,
+      "thickness": 0.43,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "licon_logic",
+          "shapes": 63678
+        },
+        "filler": {
+          "node": "licon_filler",
+          "shapes": 52033
+        }
+      }
+    },
+    {
+      "name": "li1",
+      "z": 0.94,
+      "thickness": 0.1,
+      "color": "#9b59b6",
+      "nodes": {
+        "logic": {
+          "node": "li1_logic",
+          "shapes": 16810
+        },
+        "filler": {
+          "node": "li1_filler",
+          "shapes": 1748
+        }
+      }
+    },
+    {
+      "name": "mcon",
+      "z": 1.04,
+      "thickness": 0.34,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "mcon_logic",
+          "shapes": 38907
+        },
+        "filler": {
+          "node": "mcon_filler",
+          "shapes": 29029
+        }
+      }
+    },
+    {
+      "name": "met1",
+      "z": 1.38,
+      "thickness": 0.36,
+      "color": "#3498db",
+      "nodes": {
+        "logic": {
+          "node": "met1_logic",
+          "shapes": 8195
+        },
+        "filler": {
+          "node": "met1_filler",
+          "shapes": 1748
+        }
+      }
+    },
+    {
+      "name": "via",
+      "z": 1.74,
+      "thickness": 0.27,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via_logic",
+          "shapes": 8918
+        }
+      }
+    },
+    {
+      "name": "met2",
+      "z": 2.01,
+      "thickness": 0.36,
+      "color": "#e67e22",
+      "nodes": {
+        "logic": {
+          "node": "met2_logic",
+          "shapes": 3725
+        }
+      }
+    },
+    {
+      "name": "via2",
+      "z": 2.37,
+      "thickness": 0.42,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via2_logic",
+          "shapes": 1007
+        }
+      }
+    },
+    {
+      "name": "met3",
+      "z": 2.79,
+      "thickness": 0.85,
+      "color": "#1abc9c",
+      "nodes": {
+        "logic": {
+          "node": "met3_logic",
+          "shapes": 408
+        }
+      }
+    },
+    {
+      "name": "via3",
+      "z": 3.63,
+      "thickness": 0.39,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via3_logic",
+          "shapes": 737
+        }
+      }
+    },
+    {
+      "name": "met4",
+      "z": 4.02,
+      "thickness": 0.85,
+      "color": "#f1c40f",
+      "nodes": {
+        "logic": {
+          "node": "met4_logic",
+          "shapes": 32
+        }
+      }
+    },
+    {
+      "name": "via4",
+      "z": 4.87,
+      "thickness": 0.51,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via4_logic",
+          "shapes": 10
+        }
+      }
+    },
+    {
+      "name": "met5",
+      "z": 5.37,
+      "thickness": 1.26,
+      "color": "#e84393",
+      "nodes": {
+        "logic": {
+          "node": "met5_logic",
+          "shapes": 5
+        }
+      }
+    }
+  ],
+  "labels": [
+    {
+      "text": "VGND",
+      "position": [
+        -0.015,
+        6.63,
+        -58.115
+      ],
+      "layer": "met5",
+      "direction": "inout",
+      "use": "ground"
+    },
+    {
+      "text": "VGND",
+      "position": [
+        -0.015,
+        6.63,
+        95.065
+      ],
+      "layer": "met5",
+      "direction": "inout",
+      "use": "ground"
+    },
+    {
+      "text": "VGND",
+      "position": [
+        58.205,
+        4.87,
+        0.775
+      ],
+      "layer": "met4",
+      "direction": "inout",
+      "use": "ground"
+    },
+    {
+      "text": "VGND",
+      "position": [
+        -95.395,
+        4.87,
+        0.775
+      ],
+      "layer": "met4",
+      "direction": "inout",
+      "use": "ground"
+    },
+    {
+      "text": "VPWR",
+      "position": [
+        -0.015,
+        6.63,
+        -54.815
+      ],
+      "layer": "met5",
+      "direction": "inout",
+      "use": "power"
+    },
+    {
+      "text": "VPWR",
+      "position": [
+        -0.015,
+        6.63,
+        98.365
+      ],
+      "layer": "met5",
+      "direction": "inout",
+      "use": "power"
+    },
+    {
+      "text": "VPWR",
+      "position": [
+        54.905,
+        4.87,
+        0.775
+      ],
+      "layer": "met4",
+      "direction": "inout",
+      "use": "power"
+    },
+    {
+      "text": "VPWR",
+      "position": [
+        -98.695,
+        4.87,
+        0.775
+      ],
+      "layer": "met4",
+      "direction": "inout",
+      "use": "power"
+    },
+    {
+      "text": "acc_o[0]",
+      "position": [
+        37.935,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "acc_o[10]",
+      "position": [
+        62.775,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "acc_o[1]",
+      "position": [
+        43.455,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "acc_o[2]",
+      "position": [
+        42.535,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "acc_o[3]",
+      "position": [
+        61.855,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "acc_o[4]",
+      "position": [
+        64.615,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "acc_o[5]",
+      "position": [
+        77.495,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "acc_o[6]",
+      "position": [
+        90.375,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "acc_o[7]",
+      "position": [
+        120.235,
+        3.64,
+        -78.445
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "acc_o[8]",
+      "position": [
+        120.235,
+        3.64,
+        -77.085
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "acc_o[9]",
+      "position": [
+        120.235,
+        3.64,
+        -79.805
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "bak_o[0]",
+      "position": [
+        34.255,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "bak_o[10]",
+      "position": [
+        18.615,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "bak_o[1]",
+      "position": [
+        26.895,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "bak_o[2]",
+      "position": [
+        15.855,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "bak_o[3]",
+      "position": [
+        44.375,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "bak_o[4]",
+      "position": [
+        55.415,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "bak_o[5]",
+      "position": [
+        80.255,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "bak_o[6]",
+      "position": [
+        91.295,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "bak_o[7]",
+      "position": [
+        101.415,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "bak_o[8]",
+      "position": [
+        105.095,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "bak_o[9]",
+      "position": [
+        120.235,
+        3.64,
+        -81.165
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "clk_i",
+      "position": [
+        -120.235,
+        3.64,
+        -108.365
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "in_ready_o[0]",
+      "position": [
+        120.235,
+        3.64,
+        52.115
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "in_ready_o[1]",
+      "position": [
+        120.235,
+        3.64,
+        0.435
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "in_ready_o[2]",
+      "position": [
+        120.235,
+        3.64,
+        3.155
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "in_ready_o[3]",
+      "position": [
+        120.235,
+        3.64,
+        1.795
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[0]",
+      "position": [
+        120.235,
+        3.64,
+        -75.725
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[10]",
+      "position": [
+        120.235,
+        3.64,
+        -41.725
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[11]",
+      "position": [
+        20.455,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[12]",
+      "position": [
+        120.235,
+        3.64,
+        -25.405
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[13]",
+      "position": [
+        120.235,
+        3.64,
+        -60.765
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[14]",
+      "position": [
+        120.235,
+        3.64,
+        4.515
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[15]",
+      "position": [
+        120.235,
+        3.64,
+        5.875
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[16]",
+      "position": [
+        120.235,
+        3.64,
+        48.035
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[17]",
+      "position": [
+        120.235,
+        3.64,
+        7.235
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[18]",
+      "position": [
+        120.235,
+        3.64,
+        24.915
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[19]",
+      "position": [
+        120.235,
+        3.64,
+        -17.245
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[1]",
+      "position": [
+        120.235,
+        3.64,
+        -28.125
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[20]",
+      "position": [
+        120.235,
+        3.64,
+        23.555
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[21]",
+      "position": [
+        120.235,
+        3.64,
+        -14.525
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[22]",
+      "position": [
+        120.235,
+        3.64,
+        -10.445
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[23]",
+      "position": [
+        19.535,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[24]",
+      "position": [
+        120.235,
+        3.64,
+        -32.205
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[25]",
+      "position": [
+        120.235,
+        3.64,
+        -48.525
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[26]",
+      "position": [
+        120.235,
+        3.64,
+        8.595
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[27]",
+      "position": [
+        120.235,
+        3.64,
+        9.955
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[28]",
+      "position": [
+        120.235,
+        3.64,
+        -70.285
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[29]",
+      "position": [
+        120.235,
+        3.64,
+        20.835
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[2]",
+      "position": [
+        120.235,
+        3.64,
+        14.035
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[30]",
+      "position": [
+        120.235,
+        3.64,
+        30.355
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[31]",
+      "position": [
+        120.235,
+        3.64,
+        -39.005
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[32]",
+      "position": [
+        120.235,
+        3.64,
+        31.715
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[33]",
+      "position": [
+        120.235,
+        3.64,
+        -74.365
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[34]",
+      "position": [
+        120.235,
+        3.64,
+        -62.125
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[35]",
+      "position": [
+        14.935,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[36]",
+      "position": [
+        120.235,
+        3.64,
+        -21.325
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[37]",
+      "position": [
+        120.235,
+        3.64,
+        -36.285
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[38]",
+      "position": [
+        120.235,
+        3.64,
+        11.315
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[39]",
+      "position": [
+        120.235,
+        3.64,
+        15.395
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[3]",
+      "position": [
+        120.235,
+        3.64,
+        16.755
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[40]",
+      "position": [
+        120.235,
+        3.64,
+        -18.605
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[41]",
+      "position": [
+        120.235,
+        3.64,
+        18.115
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[42]",
+      "position": [
+        120.235,
+        3.64,
+        28.995
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[43]",
+      "position": [
+        120.235,
+        3.64,
+        -24.045
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[44]",
+      "position": [
+        120.235,
+        3.64,
+        -0.925
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[45]",
+      "position": [
+        120.235,
+        3.64,
+        -67.565
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[46]",
+      "position": [
+        120.235,
+        3.64,
+        -19.965
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[47]",
+      "position": [
+        17.695,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[4]",
+      "position": [
+        120.235,
+        3.64,
+        49.395
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[5]",
+      "position": [
+        120.235,
+        3.64,
+        19.475
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[6]",
+      "position": [
+        120.235,
+        3.64,
+        33.075
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[7]",
+      "position": [
+        120.235,
+        3.64,
+        -26.765
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[8]",
+      "position": [
+        120.235,
+        3.64,
+        34.435
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "ins_i[9]",
+      "position": [
+        120.235,
+        3.64,
+        -15.885
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "len_write_i[0]",
+      "position": [
+        -70.625,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "len_write_i[1]",
+      "position": [
+        -66.945,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "len_write_i[2]",
+      "position": [
+        -68.785,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "len_write_i[3]",
+      "position": [
+        -67.865,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "len_write_i[4]",
+      "position": [
+        -66.025,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "out_ready_i[0]",
+      "position": [
+        120.235,
+        3.64,
+        42.595
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "out_ready_i[1]",
+      "position": [
+        120.235,
+        3.64,
+        45.315
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "out_ready_i[2]",
+      "position": [
+        120.235,
+        3.64,
+        39.875
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "out_ready_i[3]",
+      "position": [
+        120.235,
+        3.64,
+        -5.005
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[0]",
+      "position": [
+        31.495,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[10]",
+      "position": [
+        120.235,
+        3.64,
+        -59.405
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[11]",
+      "position": [
+        120.235,
+        3.64,
+        22.195
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[12]",
+      "position": [
+        29.655,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[13]",
+      "position": [
+        120.235,
+        3.64,
+        -71.645
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[14]",
+      "position": [
+        23.215,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[15]",
+      "position": [
+        120.235,
+        3.64,
+        -44.445
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[16]",
+      "position": [
+        120.235,
+        3.64,
+        -11.805
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[17]",
+      "position": [
+        120.235,
+        3.64,
+        -55.325
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[18]",
+      "position": [
+        120.235,
+        3.64,
+        -6.365
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[19]",
+      "position": [
+        120.235,
+        3.64,
+        -22.685
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[1]",
+      "position": [
+        120.235,
+        3.64,
+        -68.925
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[20]",
+      "position": [
+        120.235,
+        3.64,
+        -37.645
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[21]",
+      "position": [
+        120.235,
+        3.64,
+        41.235
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[22]",
+      "position": [
+        120.235,
+        3.64,
+        -30.845
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[23]",
+      "position": [
+        120.235,
+        3.64,
+        35.795
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[24]",
+      "position": [
+        30.575,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[25]",
+      "position": [
+        120.235,
+        3.64,
+        -47.165
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[26]",
+      "position": [
+        25.055,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[27]",
+      "position": [
+        120.235,
+        3.64,
+        -63.485
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[28]",
+      "position": [
+        120.235,
+        3.64,
+        -13.165
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[29]",
+      "position": [
+        120.235,
+        3.64,
+        -43.085
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[2]",
+      "position": [
+        25.975,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[30]",
+      "position": [
+        120.235,
+        3.64,
+        -9.085
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[31]",
+      "position": [
+        120.235,
+        3.64,
+        -45.805
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[32]",
+      "position": [
+        120.235,
+        3.64,
+        -53.965
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[33]",
+      "position": [
+        120.235,
+        3.64,
+        38.515
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[34]",
+      "position": [
+        120.235,
+        3.64,
+        -52.605
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[35]",
+      "position": [
+        120.235,
+        3.64,
+        26.275
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[36]",
+      "position": [
+        32.415,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[37]",
+      "position": [
+        120.235,
+        3.64,
+        -58.045
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[38]",
+      "position": [
+        24.135,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[39]",
+      "position": [
+        120.235,
+        3.64,
+        -51.245
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[3]",
+      "position": [
+        120.235,
+        3.64,
+        -40.365
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[40]",
+      "position": [
+        120.235,
+        3.64,
+        50.755
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[41]",
+      "position": [
+        120.235,
+        3.64,
+        -49.885
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[42]",
+      "position": [
+        120.235,
+        3.64,
+        46.675
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[43]",
+      "position": [
+        120.235,
+        3.64,
+        -66.205
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[44]",
+      "position": [
+        120.235,
+        3.64,
+        -34.925
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[45]",
+      "position": [
+        120.235,
+        3.64,
+        43.955
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[46]",
+      "position": [
+        120.235,
+        3.64,
+        -29.485
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[47]",
+      "position": [
+        120.235,
+        3.64,
+        -2.285
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[4]",
+      "position": [
+        120.235,
+        3.64,
+        -73.005
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[5]",
+      "position": [
+        120.235,
+        3.64,
+        -56.685
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[6]",
+      "position": [
+        120.235,
+        3.64,
+        -7.725
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[7]",
+      "position": [
+        120.235,
+        3.64,
+        -33.565
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[8]",
+      "position": [
+        120.235,
+        3.64,
+        -64.845
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "outs_o[9]",
+      "position": [
+        120.235,
+        3.64,
+        -3.645
+      ],
+      "layer": "met3",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "pc_o[0]",
+      "position": [
+        1.135,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "pc_o[1]",
+      "position": [
+        2.055,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "pc_o[2]",
+      "position": [
+        2.975,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "pc_o[3]",
+      "position": [
+        4.815,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "rst_i",
+      "position": [
+        -69.705,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "run_i",
+      "position": [
+        16.775,
+        2.37,
+        -125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[0]",
+      "position": [
+        -9.905,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[10]",
+      "position": [
+        70.135,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[11]",
+      "position": [
+        120.235,
+        3.64,
+        12.675
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[12]",
+      "position": [
+        68.295,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[13]",
+      "position": [
+        66.455,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[14]",
+      "position": [
+        -8.985,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[15]",
+      "position": [
+        120.235,
+        3.64,
+        27.635
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[16]",
+      "position": [
+        -120.235,
+        3.64,
+        -21.325
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[17]",
+      "position": [
+        -54.065,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[18]",
+      "position": [
+        -25.545,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[19]",
+      "position": [
+        -120.235,
+        3.64,
+        -3.645
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[1]",
+      "position": [
+        14.015,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[20]",
+      "position": [
+        -120.235,
+        3.64,
+        -15.885
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[21]",
+      "position": [
+        -120.235,
+        3.64,
+        62.995
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[22]",
+      "position": [
+        -120.235,
+        3.64,
+        -19.965
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[23]",
+      "position": [
+        -41.185,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[24]",
+      "position": [
+        -42.105,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[25]",
+      "position": [
+        -46.705,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[26]",
+      "position": [
+        -45.785,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[27]",
+      "position": [
+        -80.745,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[2]",
+      "position": [
+        -120.235,
+        3.64,
+        24.915
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[3]",
+      "position": [
+        -79.825,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[4]",
+      "position": [
+        -120.235,
+        3.64,
+        3.155
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[5]",
+      "position": [
+        120.235,
+        3.64,
+        37.155
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[6]",
+      "position": [
+        65.535,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[7]",
+      "position": [
+        -56.825,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[8]",
+      "position": [
+        -27.385,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "write_i[9]",
+      "position": [
+        71.055,
+        2.37,
+        125.755
+      ],
+      "layer": "met2",
+      "direction": "input",
+      "use": "signal"
+    }
+  ],
+  "stats": {
+    "area": {
+      "die_um2": 60699,
+      "stdcell_um2": 26840.7,
+      "utilization": 0.510762,
+      "wirelength_um": 73164
+    },
+    "cells": {
+      "flip_flops": 396,
+      "logic_gates": 1193,
+      "buffers": 587,
+      "filler_tap": 8255
+    },
+    "timing": {
+      "clock_period_ns": 20,
+      "setup_slack_worst_ns": -1.2082388764809127,
+      "hold_slack_worst_ns": 0.01924177538433424,
+      "fmax_typical_mhz": 86.2,
+      "fmax_worst_corner_mhz": 47.2
+    },
+    "power_typical_w": {
+      "total": 0.003235704731196165,
+      "switching": 0.001188317546620965,
+      "internal": 0.0020473382901400328,
+      "leakage": 4.886538107484739e-08
+    },
+    "checks": {
+      "drc_errors": 0,
+      "lvs_errors": 0,
+      "antenna_violations": 0,
+      "max_slew_violations": 0
+    }
+  }
+}
