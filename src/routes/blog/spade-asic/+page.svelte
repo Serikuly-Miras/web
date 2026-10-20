@@ -6,14 +6,15 @@
 	<h2>Spade to silicon</h2>
 	<p><small>2026-10-18</small></p>
 	<p>
-		I've been writing small hardware blocks in <a href="https://spade-lang.org">Spade</a> and pushing
-		them through LibreLane onto the sky130 process, then exporting the final layout to a 3D viewer.
+		I've been having a blast tinkering with <a href="https://spade-lang.org">Spade</a> and rendering sky130
+		models of what comes out.
 	</p>
 	<p>
-		U can find the code in <a href="https://github.com/Serikuly-Miras/logic">git</a>, and models at:
+		Check out the <a href="https://github.com/Serikuly-Miras/logic">code</a> and the models:
 	</p>
 	<ul>
 		<li><a href="/asic/add16">16-bit adder</a></li>
 		<li><a href="/asic/mul16">16-bit multiplier</a></li>
+		<li><a href="/asic/blinky">blinky</a></li>
 	</ul>
 </article>

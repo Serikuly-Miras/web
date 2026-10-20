@@ -1,0 +1,322 @@
+{
+  "design": "blinky",
+  "pdk": "sky130A",
+  "units": "um",
+  "axes": "x = GDS x, y = up, z = -GDS y; origin at die centre",
+  "z_scale": 1.0,
+  "size": [
+    71.95,
+    82.67
+  ],
+  "die": {
+    "node": "die",
+    "color": "#2b3038",
+    "thickness": 0.1
+  },
+  "layers": [
+    {
+      "name": "diff",
+      "z": 0.0,
+      "thickness": 0.12,
+      "color": "#7a9a5a",
+      "nodes": {
+        "logic": {
+          "node": "diff_logic",
+          "shapes": 549
+        },
+        "filler": {
+          "node": "diff_filler",
+          "shapes": 814
+        }
+      }
+    },
+    {
+      "name": "poly",
+      "z": 0.33,
+      "thickness": 0.18,
+      "color": "#c0392b",
+      "nodes": {
+        "logic": {
+          "node": "poly_logic",
+          "shapes": 934
+        },
+        "filler": {
+          "node": "poly_filler",
+          "shapes": 814
+        }
+      }
+    },
+    {
+      "name": "licon",
+      "z": 0.51,
+      "thickness": 0.43,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "licon_logic",
+          "shapes": 4644
+        },
+        "filler": {
+          "node": "licon_filler",
+          "shapes": 3400
+        }
+      }
+    },
+    {
+      "name": "li1",
+      "z": 0.94,
+      "thickness": 0.1,
+      "color": "#9b59b6",
+      "nodes": {
+        "logic": {
+          "node": "li1_logic",
+          "shapes": 1209
+        },
+        "filler": {
+          "node": "li1_filler",
+          "shapes": 146
+        }
+      }
+    },
+    {
+      "name": "mcon",
+      "z": 1.04,
+      "thickness": 0.34,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "mcon_logic",
+          "shapes": 2798
+        },
+        "filler": {
+          "node": "mcon_filler",
+          "shapes": 2037
+        }
+      }
+    },
+    {
+      "name": "met1",
+      "z": 1.38,
+      "thickness": 0.36,
+      "color": "#3498db",
+      "nodes": {
+        "logic": {
+          "node": "met1_logic",
+          "shapes": 574
+        },
+        "filler": {
+          "node": "met1_filler",
+          "shapes": 146
+        }
+      }
+    },
+    {
+      "name": "via",
+      "z": 1.74,
+      "thickness": 0.27,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via_logic",
+          "shapes": 647
+        }
+      }
+    },
+    {
+      "name": "met2",
+      "z": 2.01,
+      "thickness": 0.36,
+      "color": "#e67e22",
+      "nodes": {
+        "logic": {
+          "node": "met2_logic",
+          "shapes": 239
+        }
+      }
+    },
+    {
+      "name": "via2",
+      "z": 2.37,
+      "thickness": 0.42,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via2_logic",
+          "shapes": 98
+        }
+      }
+    },
+    {
+      "name": "met3",
+      "z": 2.79,
+      "thickness": 0.85,
+      "color": "#1abc9c",
+      "nodes": {
+        "logic": {
+          "node": "met3_logic",
+          "shapes": 27
+        }
+      }
+    },
+    {
+      "name": "via3",
+      "z": 3.63,
+      "thickness": 0.39,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via3_logic",
+          "shapes": 92
+        }
+      }
+    },
+    {
+      "name": "met4",
+      "z": 4.02,
+      "thickness": 0.85,
+      "color": "#f1c40f",
+      "nodes": {
+        "logic": {
+          "node": "met4_logic",
+          "shapes": 2
+        }
+      }
+    },
+    {
+      "name": "via4",
+      "z": 4.87,
+      "thickness": 0.51,
+      "color": "#888888",
+      "nodes": {
+        "logic": {
+          "node": "via4_logic",
+          "shapes": 2
+        }
+      }
+    },
+    {
+      "name": "met5",
+      "z": 5.37,
+      "thickness": 1.26,
+      "color": "#e84393",
+      "nodes": {
+        "logic": {
+          "node": "met5_logic",
+          "shapes": 2
+        }
+      }
+    }
+  ],
+  "labels": [
+    {
+      "text": "VGND",
+      "position": [
+        -0.095,
+        6.63,
+        10.505
+      ],
+      "layer": "met5",
+      "direction": "inout",
+      "use": "ground"
+    },
+    {
+      "text": "VGND",
+      "position": [
+        -10.835,
+        4.87,
+        0.535
+      ],
+      "layer": "met4",
+      "direction": "inout",
+      "use": "ground"
+    },
+    {
+      "text": "VPWR",
+      "position": [
+        -0.095,
+        6.63,
+        13.805
+      ],
+      "layer": "met5",
+      "direction": "inout",
+      "use": "power"
+    },
+    {
+      "text": "VPWR",
+      "position": [
+        -14.135,
+        4.87,
+        0.535
+      ],
+      "layer": "met4",
+      "direction": "inout",
+      "use": "power"
+    },
+    {
+      "text": "clk_i",
+      "position": [
+        -35.675,
+        3.64,
+        -22.925
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    },
+    {
+      "text": "led_o",
+      "position": [
+        8.415,
+        2.37,
+        41.195
+      ],
+      "layer": "met2",
+      "direction": "output",
+      "use": "signal"
+    },
+    {
+      "text": "rst_i",
+      "position": [
+        35.675,
+        3.64,
+        5.635
+      ],
+      "layer": "met3",
+      "direction": "input",
+      "use": "signal"
+    }
+  ],
+  "stats": {
+    "area": {
+      "die_um2": 5948.11,
+      "stdcell_um2": 1950.62,
+      "utilization": 0.536846,
+      "wirelength_um": 2927
+    },
+    "cells": {
+      "flip_flops": 28,
+      "logic_gates": 99,
+      "buffers": 34,
+      "filler_tap": 544
+    },
+    "timing": {
+      "clock_period_ns": 20,
+      "setup_slack_worst_ns": 8.434753578776265,
+      "hold_slack_worst_ns": 0.10497555899453315,
+      "fmax_typical_mhz": 132.5,
+      "fmax_worst_corner_mhz": 86.5
+    },
+    "power_typical_w": {
+      "total": 0.0001459587801946327,
+      "switching": 2.795045293169096e-05,
+      "internal": 0.00011800416541518643,
+      "leakage": 4.165559897018056e-09
+    },
+    "checks": {
+      "drc_errors": 0,
+      "lvs_errors": 0,
+      "antenna_violations": 0,
+      "max_slew_violations": 11
+    }
+  }
+}
