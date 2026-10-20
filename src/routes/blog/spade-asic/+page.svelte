@@ -13,9 +13,9 @@
 		Check out the <a href="https://github.com/Serikuly-Miras/logic">code</a> and the models:
 	</p>
 	<ul>
-		<li><a href="/asic/add16">add16</a></li>
-		<li><a href="/asic/mul16">mul16</a></li>
-		<li><a href="/asic/blinky">blinky</a></li>
-		<li><a href="/asic/fifo16">fifo16</a></li>
+		<li><a href="/asic/add16">add16</a> — 16-bit ripple-carry adder</li>
+		<li><a href="/asic/mul16">mul16</a> — 16×16 combinational multiplier</li>
+		<li><a href="/asic/blinky">blinky</a> — counter that toggles an LED</li>
+		<li><a href="/asic/fifo16">fifo16</a> — 16-entry synchronous FIFO</li>
 	</ul>
 </article>
