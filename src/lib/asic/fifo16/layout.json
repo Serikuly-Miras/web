@@ -22,11 +22,11 @@
       "nodes": {
         "logic": {
           "node": "diff_logic",
-          "shapes": 4684
+          "shapes": 3610
         },
         "filler": {
           "node": "diff_filler",
-          "shapes": 5616
+          "shapes": 7072
         }
       }
     },
@@ -38,11 +38,11 @@
       "nodes": {
         "logic": {
           "node": "poly_logic",
-          "shapes": 8885
+          "shapes": 7814
         },
         "filler": {
           "node": "poly_filler",
-          "shapes": 5616
+          "shapes": 7072
         }
       }
     },
@@ -54,11 +54,11 @@
       "nodes": {
         "logic": {
           "node": "licon_logic",
-          "shapes": 36506
+          "shapes": 32204
         },
         "filler": {
           "node": "licon_filler",
-          "shapes": 23616
+          "shapes": 29440
         }
       }
     },
@@ -70,11 +70,11 @@
       "nodes": {
         "logic": {
           "node": "li1_logic",
-          "shapes": 10112
+          "shapes": 8825
         },
         "filler": {
           "node": "li1_filler",
-          "shapes": 998
+          "shapes": 802
         }
       }
     },
@@ -86,11 +86,11 @@
       "nodes": {
         "logic": {
           "node": "mcon_logic",
-          "shapes": 22782
+          "shapes": 20158
         },
         "filler": {
           "node": "mcon_filler",
-          "shapes": 13458
+          "shapes": 15734
         }
       }
     },
@@ -102,11 +102,11 @@
       "nodes": {
         "logic": {
           "node": "met1_logic",
-          "shapes": 4492
+          "shapes": 4024
         },
         "filler": {
           "node": "met1_filler",
-          "shapes": 998
+          "shapes": 802
         }
       }
     },
@@ -118,7 +118,7 @@
       "nodes": {
         "logic": {
           "node": "via_logic",
-          "shapes": 4415
+          "shapes": 3976
         }
       }
     },
@@ -130,7 +130,7 @@
       "nodes": {
         "logic": {
           "node": "met2_logic",
-          "shapes": 1885
+          "shapes": 1659
         }
       }
     },
@@ -142,7 +142,7 @@
       "nodes": {
         "logic": {
           "node": "via2_logic",
-          "shapes": 418
+          "shapes": 410
         }
       }
     },
@@ -154,7 +154,7 @@
       "nodes": {
         "logic": {
           "node": "met3_logic",
-          "shapes": 153
+          "shapes": 152
         }
       }
     },
@@ -166,7 +166,7 @@
       "nodes": {
         "logic": {
           "node": "via3_logic",
-          "shapes": 267
+          "shapes": 268
         }
       }
     },
@@ -740,34 +740,34 @@
   "stats": {
     "area": {
       "die_um2": 34303.7,
-      "stdcell_um2": 16811.1,
-      "utilization": 0.59049,
-      "wirelength_um": 32282
+      "stdcell_um2": 14093.5,
+      "utilization": 0.495034,
+      "wirelength_um": 30297
     },
     "cells": {
       "flip_flops": 273,
       "logic_gates": 462,
-      "buffers": 498,
-      "filler_tap": 3814
+      "buffers": 269,
+      "filler_tap": 4526
     },
     "timing": {
       "clock_period_ns": 20,
-      "setup_slack_worst_ns": 5.84253373329489,
-      "hold_slack_worst_ns": 0.11539264315132818,
-      "fmax_typical_mhz": 106.9,
-      "fmax_worst_corner_mhz": 70.6
+      "setup_slack_worst_ns": 7.728286673803921,
+      "hold_slack_worst_ns": 0.016309454248762574,
+      "fmax_typical_mhz": 107.7,
+      "fmax_worst_corner_mhz": 81.5
     },
     "power_typical_w": {
-      "total": 0.0018076266860589385,
-      "switching": 0.0005084958393126726,
-      "internal": 0.0012991006951779127,
-      "leakage": 3.0117924154637876e-08
+      "total": 0.0016791066154837608,
+      "switching": 0.0004925766843371093,
+      "internal": 0.0011865035630762577,
+      "leakage": 2.631835549493644e-08
     },
     "checks": {
       "drc_errors": 0,
       "lvs_errors": 0,
       "antenna_violations": 0,
-      "max_slew_violations": 390
+      "max_slew_violations": 0
     }
   }
 }
