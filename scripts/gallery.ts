@@ -5,6 +5,7 @@ import sharp from 'sharp';
 const SRC = 'src/lib/gallery';
 const OUT = 'static/gallery';
 const MANIFEST = 'src/lib/generated/gallery.json';
+const PAGE = 'src/routes/photos/+page.svelte';
 const WIDTHS = [2560, 3840];
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const KEEP_CHUNKS = new Set([
@@ -23,17 +24,19 @@ const KEEP_CHUNKS = new Set([
 	'cLLI'
 ]);
 
-function stripPng(buf: Buffer): Buffer {
+function stripPng(buf: Buffer, file: string): Buffer {
 	const parts = [buf.subarray(0, 8)];
 	let pos = 8;
-	while (pos < buf.length) {
+	while (pos + 12 <= buf.length) {
 		const len = buf.readUInt32BE(pos);
 		const type = buf.toString('latin1', pos + 4, pos + 8);
 		const end = pos + 12 + len;
+		if (!/^[A-Za-z]{4}$/.test(type) || end > buf.length) break;
 		if (KEEP_CHUNKS.has(type)) parts.push(buf.subarray(pos, end));
 		pos = end;
+		if (type === 'IEND') return Buffer.concat(parts);
 	}
-	return Buffer.concat(parts);
+	throw new Error(`${file}: truncated or corrupt PNG (no IEND), re-export it`);
 }
 
 async function mtime(file: string): Promise<number> {
@@ -74,7 +77,7 @@ for (const date of (await readdir(SRC)).sort().reverse()) {
 
 		if (stale) {
 			console.log(`gallery: building ${id}`);
-			await writeFile(path.join(OUT, `${id}.png`), stripPng(await readFile(src)));
+			await writeFile(path.join(OUT, `${id}.png`), stripPng(await readFile(src), src));
 			for (const w of unique) {
 				const resized = sharp(src).resize({ width: w });
 				await resized
@@ -114,3 +117,8 @@ for (const f of await readdir(OUT)) {
 }
 
 await writeFile(MANIFEST, JSON.stringify(photos, null, '\t') + '\n');
+
+const page = await readFile(PAGE, 'utf8');
+for (const { id } of photos) {
+	if (!page.includes(id)) console.warn(`gallery: ${id} is not used in ${PAGE}`);
+}
