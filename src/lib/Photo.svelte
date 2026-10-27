@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { reveal, type Photo } from './gallery.ts';
 
-	let { photo }: { photo: Photo } = $props();
+	// share: fraction of the column width this photo takes (set by PhotoRow)
+	let { photo, share = 1 }: { photo: Photo; share?: number } = $props();
 	let caption = $derived(
 		[
 			photo.meta.focalLength35 ? `${photo.meta.focalLength35} eq.` : photo.meta.focalLength,
@@ -10,10 +11,10 @@
 			photo.meta.iso && `ISO ${photo.meta.iso}`
 		].filter(Boolean)
 	);
-	const sizes = '(min-width: 640px) 608px, calc(100vw - 2rem)';
+	let sizes = $derived(`(min-width: 640px) ${Math.ceil(608 * share)}px, calc(100vw - 2rem)`);
 </script>
 
-<figure>
+<figure style:flex={share}>
 	<a href="/photos/{photo.id}" target="_blank" rel="noopener">
 		<picture>
 			<source type="image/avif" srcset={photo.avif} {sizes} />
@@ -41,6 +42,7 @@
 <style>
 	figure {
 		margin: 0 0 2rem;
+		min-width: 0;
 	}
 
 	img {

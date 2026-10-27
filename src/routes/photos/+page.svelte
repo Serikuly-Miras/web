@@ -1,6 +1,6 @@
 <script lang="ts">
-	import photos from '../../lib/gallery.ts';
-	import Photo from '../../lib/Photo.svelte';
+	import photos, { rows } from '../../lib/gallery.ts';
+	import PhotoRow from '../../lib/PhotoRow.svelte';
 
 	// photos come sorted newest first, so each day is one run
 	let days = Map.groupBy(photos, (photo) => photo.date);
@@ -15,8 +15,8 @@
 	{#each days as [date, group] (date)}
 		<section>
 			<p class="day"><small>{date}</small></p>
-			{#each group as photo (photo.id)}
-				<Photo {photo} />
+			{#each rows(group) as row (row.photos[0].id)}
+				<PhotoRow {row} />
 			{/each}
 		</section>
 	{/each}

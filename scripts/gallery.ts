@@ -209,6 +209,7 @@ for (const file of (await readdir(SRC)).filter((f) => f.endsWith('.avif')).sort(
 		avif: srcset('avif'),
 		jpg: srcset('jpg'),
 		fallback: `/gallery/${id}-${unique.at(-1)}.jpg`,
+		large: `/gallery/${id}-${unique.at(-1)}.avif`,
 		original: `/gallery/${original}`,
 		originalBytes: (await stat(path.join(OUT, original))).size,
 		meta

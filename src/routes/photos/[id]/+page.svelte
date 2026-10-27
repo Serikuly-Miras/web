@@ -4,22 +4,22 @@
 	let { data } = $props();
 	let photo = $derived(data.photo);
 
+	// the 4k avif shows right away; the lossless original only loads on request
+	let lossless = $state(false);
 	let src = $state<string>();
 	let received = $state(0);
-	let loading = $state(false);
 	let loaded = $state(false);
 	let zoomed = $state(false);
-	let progress = $derived(Math.min(received / photo.originalBytes, 1));
 
 	let filename = $derived(photo.original.split('/').pop()!);
 
 	$effect(() => {
+		if (!lossless) return;
 		const url = photo.original;
 		const controller = new AbortController();
 		let blobUrl: string | undefined;
 		received = 0;
 		loaded = false;
-		loading = true;
 		src = undefined;
 
 		(async () => {
@@ -54,6 +54,10 @@
 
 <div class="viewer" class:zoomed>
 	<button onclick={() => (zoomed = !zoomed)} title={zoomed ? 'fit to screen' : 'actual size'}>
+		<picture class:hidden={loaded}>
+			<source type="image/avif" srcset={photo.large} />
+			<img src={photo.fallback} width={photo.width} height={photo.height} alt={photo.meta.title} />
+		</picture>
 		{#if src}
 			<img
 				class:hidden={!loaded}
@@ -65,27 +69,18 @@
 				onerror={() => (loaded = true)}
 			/>
 		{/if}
-		<noscript>
-			<img src={photo.original} width={photo.width} height={photo.height} alt={photo.meta.title} />
-		</noscript>
 	</button>
-	{#if loading && !loaded}
-		<div class="status" aria-live="polite">
-			<small>loading avif · {megabytes(received)} / {megabytes(photo.originalBytes)}</small>
-			<div
-				class="bar"
-				role="progressbar"
-				aria-valuemin={0}
-				aria-valuemax={100}
-				aria-valuenow={Math.round(progress * 100)}
-			>
-				<div style:width="{progress * 100}%"></div>
-			</div>
-		</div>
-	{/if}
 	<p class="info">
 		<small
-			>{details(photo)} · <a href={src ?? photo.original} download={filename}>save</a> ·
+			>{details(photo)} ·
+			{#if !lossless}
+				<button class="link" onclick={() => (lossless = true)}>show lossless</button> ·
+			{:else if !loaded}
+				<span aria-live="polite"
+					>loading lossless {megabytes(received)} / {megabytes(photo.originalBytes)}</span
+				> ·
+			{/if}
+			<a href={src ?? photo.original} download={filename}>save</a> ·
 			<a href="/photos">photos</a></small
 		>
 	</p>
@@ -125,8 +120,21 @@
 		outline-offset: -1px;
 	}
 
-	img.hidden {
-		visibility: hidden;
+	picture {
+		display: contents;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	button.link {
+		flex: none;
+		display: inline;
+		font: inherit;
+		color: var(--fg);
+		text-decoration: underline;
+		cursor: pointer;
 	}
 
 	.zoomed button {
@@ -138,28 +146,6 @@
 	.zoomed img {
 		max-width: none;
 		max-height: none;
-	}
-
-	.status {
-		position: absolute;
-		inset: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		align-items: center;
-		justify-content: center;
-		pointer-events: none;
-	}
-
-	.bar {
-		width: 12rem;
-		height: 2px;
-		background: var(--fg-muted);
-	}
-
-	.bar div {
-		height: 100%;
-		background: var(--fg);
 	}
 
 	.info {
