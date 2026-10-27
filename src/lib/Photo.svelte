@@ -1,26 +1,19 @@
 <script lang="ts">
-	import photos, { reveal } from './gallery.ts';
+	import { reveal, type Photo } from './gallery.ts';
 
-	// share: fraction of the column width this photo takes (set by PhotoRow)
-	let { id, share = 1 }: { id: string; share?: number } = $props();
-
-	let photo = $derived.by(() => {
-		const found = photos.find((p) => p.id === id);
-		if (!found) throw new Error(`Photo: unknown id "${id}"`);
-		return found;
-	});
+	let { photo }: { photo: Photo } = $props();
 	let caption = $derived(
 		[
-			photo.meta.focalLength,
+			photo.meta.focalLength35 ? `${photo.meta.focalLength35} eq.` : photo.meta.focalLength,
 			photo.meta.aperture,
 			photo.meta.shutter,
 			photo.meta.iso && `ISO ${photo.meta.iso}`
 		].filter(Boolean)
 	);
-	let sizes = $derived(`(min-width: 640px) ${Math.ceil(608 * share)}px, calc(100vw - 2rem)`);
+	const sizes = '(min-width: 640px) 608px, calc(100vw - 2rem)';
 </script>
 
-<figure style:flex={share}>
+<figure>
 	<a href="/photos/{photo.id}" target="_blank" rel="noopener">
 		<picture>
 			<source type="image/avif" srcset={photo.avif} {sizes} />
@@ -33,7 +26,7 @@
 				height={photo.height}
 				loading="lazy"
 				decoding="async"
-				alt={photo.meta.title ?? photo.id}
+				alt={photo.meta.title}
 			/>
 		</picture>
 	</a>
@@ -48,7 +41,6 @@
 <style>
 	figure {
 		margin: 0 0 2rem;
-		min-width: 0;
 	}
 
 	img {

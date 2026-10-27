@@ -9,12 +9,12 @@
 	let loading = $state(false);
 	let loaded = $state(false);
 	let zoomed = $state(false);
-	let progress = $derived(Math.min(received / photo.pngBytes, 1));
+	let progress = $derived(Math.min(received / photo.originalBytes, 1));
 
-	let filename = $derived(photo.png.split('/').pop());
+	let filename = $derived(photo.original.split('/').pop()!);
 
 	$effect(() => {
-		const url = photo.png;
+		const url = photo.original;
 		const controller = new AbortController();
 		let blobUrl: string | undefined;
 		received = 0;
@@ -34,7 +34,7 @@
 					chunks.push(value);
 					received += value.length;
 				}
-				blobUrl = URL.createObjectURL(new Blob(chunks, { type: 'image/png' }));
+				blobUrl = URL.createObjectURL(new Blob(chunks, { type: 'image/avif' }));
 				src = blobUrl;
 			} catch {
 				if (!controller.signal.aborted) src = url;
@@ -49,7 +49,7 @@
 </script>
 
 <svelte:head>
-	<title>{photo.meta.title ?? photo.id} | s-miras</title>
+	<title>{photo.meta.title} | s-miras</title>
 </svelte:head>
 
 <div class="viewer" class:zoomed>
@@ -60,23 +60,18 @@
 				{src}
 				width={photo.width}
 				height={photo.height}
-				alt={photo.meta.title ?? photo.id}
+				alt={photo.meta.title}
 				onload={() => (loaded = true)}
 				onerror={() => (loaded = true)}
 			/>
 		{/if}
 		<noscript>
-			<img
-				src={photo.png}
-				width={photo.width}
-				height={photo.height}
-				alt={photo.meta.title ?? photo.id}
-			/>
+			<img src={photo.original} width={photo.width} height={photo.height} alt={photo.meta.title} />
 		</noscript>
 	</button>
 	{#if loading && !loaded}
 		<div class="status" aria-live="polite">
-			<small>loading png · {megabytes(received)} / {megabytes(photo.pngBytes)}</small>
+			<small>loading avif · {megabytes(received)} / {megabytes(photo.originalBytes)}</small>
 			<div
 				class="bar"
 				role="progressbar"
@@ -90,7 +85,7 @@
 	{/if}
 	<p class="info">
 		<small
-			>{details(photo)} · <a href={src ?? photo.png} download={filename}>save</a> ·
+			>{details(photo)} · <a href={src ?? photo.original} download={filename}>save</a> ·
 			<a href="/photos">photos</a></small
 		>
 	</p>

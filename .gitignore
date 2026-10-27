@@ -27,7 +27,7 @@ vite.config.ts.timestamp-*
 /src/lib/generated
 
 # Gallery source images
-/src/lib/gallery/**/*.png
+/src/lib/gallery/**/*.avif
 
 # Generated ASIC models
 /static/asic

@@ -2,10 +2,13 @@ import type { Attachment } from 'svelte/attachments';
 import photos from '#lib/generated/gallery.json';
 
 export type Meta = {
-	title?: string;
+	title: string;
+	time?: string;
+	offset?: string;
 	camera?: string;
 	lens?: string;
 	focalLength?: string;
+	focalLength35?: string;
 	aperture?: string;
 	shutter?: string;
 	iso?: number;
@@ -15,13 +18,13 @@ export type Photo = (typeof photos)[number] & { meta: Meta };
 
 export default photos as Photo[];
 
-export function details(photo: Photo, { withLens = true } = {}): string {
+export function details(photo: Photo): string {
 	const { meta } = photo;
 	return [
-		photo.date,
+		[photo.date, meta.time, meta.offset].filter(Boolean).join(' '),
 		meta.camera,
-		withLens && meta.lens,
-		meta.focalLength,
+		meta.lens,
+		meta.focalLength35 ? `${meta.focalLength} (${meta.focalLength35} eq.)` : meta.focalLength,
 		meta.aperture,
 		meta.shutter,
 		meta.iso && `ISO ${meta.iso}`
