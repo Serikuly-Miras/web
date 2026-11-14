@@ -1,0 +1,36 @@
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Generated gallery
+/static/gallery
+/src/lib/generated
+
+# Gallery source images
+/src/lib/gallery/**/*.avif
+
+# Generated ASIC models
+/static/asic
+
+# ASIC model sources
+/src/lib/asic/**/*.glb
